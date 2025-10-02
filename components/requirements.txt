@@ -30,7 +30,8 @@ typing_extensions==4.13.2
 pandas==2.0.3
 tensorboardx==2.2
 trimesh==3.9.24
-joblib==1.0.1
+# joblib 1.0.1 -> 1.2.0
+joblib==1.2.0
 h5py==3.12.1
 chumpy==0.70
 smplx==0.1.28
@@ -38,7 +39,8 @@ smplx==0.1.28
 # ======================
 # Slowfast
 # ======================
-sklearn==1.6.1
+# sklearn -> scikit-learn
+scikit-learn==1.6.1
 pytorchvideo==0.1.5
 
 # ======================

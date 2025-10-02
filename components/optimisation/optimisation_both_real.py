@@ -66,13 +66,15 @@ def main_real_real(real_path_npz_1, real_path_npz_2, folder_path):
         (0.9, 0.1)
     ]
 
+    alpha_weight=0.3
+
     if bigger_array == real_data_1_path:
         for w_A, w_B in weight_pairs:
-            P_opt = compute_P_opt(real_data_1_path, extended_new_path, alpha=0.5, w_A=w_A, w_B=w_B)
+            P_opt = compute_P_opt(real_data_1_path, extended_new_path, alpha=alpha_weight, w_A=w_A, w_B=w_B)
             np.save(f"{folder_path_variations}/_euclidean_distances_wA{w_A}_wB{w_B}.npy", P_opt)
 
     # in a situation where the real_path is shorter than the synthetic path
     if smaller_array == real_data_1_path:
         for w_A, w_B in weight_pairs:
-            P_opt = compute_P_opt(real_data_2_path, extended_new_path, alpha=0.5, w_A=w_A, w_B=w_B) 
+            P_opt = compute_P_opt(real_data_2_path, extended_new_path, alpha=alpha_weight, w_A=w_A, w_B=w_B) 
             np.save(f"{folder_path_variations}/_euclidean_distances_wA{w_A}_wB{w_B}.npy", P_opt)
